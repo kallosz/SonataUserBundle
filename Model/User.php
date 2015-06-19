@@ -11,10 +11,11 @@
 
 namespace Sonata\UserBundle\Model;
 
-use FOS\UserBundle\Entity\User as AbstractedUser;
+use FOS\UserBundle\Model\User as AbstractedUser;
+use Sonata\UserBundle\Model\UserInterface;
 
 /**
- * Represents a User model.
+ * Represents a User model
  */
 abstract class User extends AbstractedUser implements UserInterface
 {
@@ -129,7 +130,7 @@ abstract class User extends AbstractedUser implements UserInterface
     protected $token;
 
     /**
-     * Sets the creation date.
+     * Sets the creation date
      *
      * @param \DateTime|null $createdAt
      */
@@ -139,7 +140,7 @@ abstract class User extends AbstractedUser implements UserInterface
     }
 
     /**
-     * Returns the creation date.
+     * Returns the creation date
      *
      * @return \DateTime|null
      */
@@ -149,7 +150,7 @@ abstract class User extends AbstractedUser implements UserInterface
     }
 
     /**
-     * Sets the last update date.
+     * Sets the last update date
      *
      * @param \DateTime|null $updatedAt
      */
@@ -159,7 +160,7 @@ abstract class User extends AbstractedUser implements UserInterface
     }
 
     /**
-     * Returns the last update date.
+     * Returns the last update date
      *
      * @return \DateTime|null
      */
@@ -169,7 +170,7 @@ abstract class User extends AbstractedUser implements UserInterface
     }
 
     /**
-     * Returns the expiration date.
+     * Returns the expiration date
      *
      * @return \DateTime|null
      */
@@ -179,7 +180,7 @@ abstract class User extends AbstractedUser implements UserInterface
     }
 
     /**
-     * Returns the credentials expiration date.
+     * Returns the credentials expiration date
      *
      * @return \DateTime
      */
@@ -189,7 +190,7 @@ abstract class User extends AbstractedUser implements UserInterface
     }
 
     /**
-     * Sets the credentials expiration date.
+     * Sets the credentials expiration date
      *
      * @param \DateTime|null $date
      */
@@ -199,7 +200,7 @@ abstract class User extends AbstractedUser implements UserInterface
     }
 
     /**
-     * Returns a string representation.
+     * Returns a string representation
      *
      * @return string
      */
@@ -209,7 +210,7 @@ abstract class User extends AbstractedUser implements UserInterface
     }
 
     /**
-     * Sets the user groups.
+     * Sets the user groups
      *
      * @param array $groups
      */
@@ -221,7 +222,7 @@ abstract class User extends AbstractedUser implements UserInterface
     }
 
     /**
-     * Sets the two-step verification code.
+     * Sets the two-step verification code
      *
      * @param string $twoStepVerificationCode
      */
@@ -231,7 +232,7 @@ abstract class User extends AbstractedUser implements UserInterface
     }
 
     /**
-     * Returns the two-step verification code.
+     * Returns the two-step verification code
      *
      * @return string
      */
@@ -549,7 +550,7 @@ abstract class User extends AbstractedUser implements UserInterface
      */
     public function getFullname()
     {
-        return sprintf('%s %s', $this->getFirstname(), $this->getLastname());
+        return sprintf("%s %s", $this->getFirstname(), $this->getLastname());
     }
 
     /**
